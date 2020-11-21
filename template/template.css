@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'Noto';
+	src: url(./noto/NotoSerifJP-Regular.otf);
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+#novel {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    
+    inline-size: 100vh;
+    block-size: 100vw;
+    /* text-combine-upright: digits 2; */
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 2vh;
+}
+
+.novel_subtitle {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+p {
+    display: block;
+    color: black;
+    font-family: 'Noto', serif;
+    margin: 0;
+    inline-size: 95vh;
+    padding-inline: 2.5vh;
+    padding-block: 1em;
+}
