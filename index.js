@@ -1,13 +1,21 @@
 const express = require('express')
+const multer = require('multer')
 const fs = require('fs')
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer')
 const app = express()
+const upload = multer({ dest: 'uploads/' })
 const port = 3000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.post('/', (req, res) => {
+app.post('/', upload.any(), (req, res) => {
+    console.log(req.body)
+    console.log(req.files)
+    res.status(200).send('succeeded')
+})
+
+app.post('/hoge/', (req, res) => {
     const { bodyHtml, ...resBody } = req.body
     console.log(bodyHtml.slice(0, 100));
 
