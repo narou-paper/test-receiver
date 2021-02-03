@@ -11,8 +11,12 @@ body {
   box-sizing: border-box;
 }
 
+@page {
+  size: A4;
+}
+
 #novel {
-  font-size: 2.5rem;
+  font-size: 13mm;
 }
 
 .novel_subtitle {
